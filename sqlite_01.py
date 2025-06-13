@@ -35,10 +35,10 @@ names_list = [
 ]
 cursor.executemany("INSERT INTO table_1 VALUES (?,?,?)", names_list)
 
-# Query the database
-cursor.execute("SELECT * FROM table_1")
+# Query the primary key and the database
+cursor.execute("SELECT rowid, * FROM table_1")
 for i in cursor.fetchall():
-	print(f'{i[0]}  {i[1]}  {i[2]}')
+	print(f'{i[0]}  {i[1]}  {i[2]}  {i[3]}')
 
 # Commiting the table creation
 database_1.commit()
