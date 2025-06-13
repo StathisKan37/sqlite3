@@ -22,7 +22,7 @@ cursor.executemany("INSERT INTO table_1 VALUES (?,?,?)", names_list)
 # Updating table_1
 cursor.execute("UPDATE table_1 SET last_name = 'Last_name_3' WHERE rowid = 3")
 
-# Query the row whith last name: 'Last_name_3'
+# Query the primary key and the database
 cursor.execute("SELECT rowid,* FROM table_1")
 for i in cursor.fetchall():
 	print(f'{i[0]}  {i[1]}  {i[2]}  {i[3]}')
@@ -31,4 +31,4 @@ for i in cursor.fetchall():
 database_1.commit()
 
 # Closing the connection
-database_1.close()
+database_1.close()# Query the primary key and the database
