@@ -23,7 +23,7 @@ cursor.executemany("INSERT INTO table_1 VALUES (?,?,?)", names_list)
 # Deleting rowid: 5 (Name_5, Last_name_5, name5@mail.com)
 cursor.execute("DELETE from table_1 WHERE rowid = 5")
 
-# Query the row whith last name: 'Last_name_3'
+# Query the primary key and the database
 cursor.execute("SELECT rowid,* FROM table_1")
 for i in cursor.fetchall():
 	print(f'{i[0]}  {i[1]}  {i[2]}  {i[3]}')
