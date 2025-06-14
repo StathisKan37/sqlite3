@@ -14,7 +14,7 @@ cursor = database_1.cursor()
 cursor.execute("DROP TABLE IF EXISTS table_1")
 
 # Creating a table
-cursor.execute("CREATE TABLE table_1(product text, unit_price real)")
+cursor.execute("CREATE TABLE table_1(product text, unit_price numeric)")
 # Inserting new values in table_1
 whiskys = [
 	('Jameson', 20.72),
