@@ -1,4 +1,4 @@
-# Exersice:
+# Exercise:
 # ---------------------------------------------------------------------
 # Whrite an SQL query to return all the products of the database in
 # three columns: Product name, price per unit and new price
