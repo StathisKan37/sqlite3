@@ -22,7 +22,7 @@ whiskys = [
 	('Johnie Walker Red', 16.90),
 	('Johnie Walker Black', 27.58),
 	('Famous Grouse', 18.10),
-	('Grants', 18.92),
+	('Grants', 18.92)
 ]
 cursor.executemany("INSERT INTO table_1 VALUES (?,?)", whiskys)
 
