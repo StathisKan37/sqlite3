@@ -1,8 +1,9 @@
 # Excersice:
 # ---------------------------------------------------------------------
-# 1) Query the whiskies with less than 25 euros
-# 2) Query everything except 7up
-# 3) Query all the whiskies and the beers
+# 1. Query the whiskies with less than 25 euros
+# 2. Query everything except 7up
+# 3. Query all the whiskies and the beers
+# 4. Query all the products start with 'J'
 
 import sqlite3
 
@@ -32,23 +33,30 @@ products = [
 ]
 cursor.executemany("INSERT INTO table_1 VALUES (?,?,?)", products)
 
-# Querying all the whiskies with less than 25 euros
+# 1. Querying all the whiskies with less than 25 euros
 print('WHISKIES CHEAPER THAN 25 EUROS:')
 cursor.execute("SELECT * FROM table_1 WHERE category='Whisky' AND price<25")
 for i in cursor.fetchall():
     print(f'{i[0]}  {i[1]}  {i[2]}')
 print('-------------------------------')
 
-# Querying everything except 7up
+# 2. Querying everything except 7up
 print('ALL DRINKS WITHOUT 7UP:')
 cursor.execute("SELECT * FROM table_1 WHERE NOT product='7up'")
 for i in cursor.fetchall():
     print(f'{i[0]}  {i[1]}  {i[2]}')
 print('-------------------------------')
 
-# Querying all whiskies and beers
+# 3. Querying all whiskies and beers
 print('ALL WHISKIES AND BEERS:')
 cursor.execute("SELECT * FROM table_1 WHERE category='Whisky' OR category='Beer'")
+for i in cursor.fetchall():
+    print(f'{i[0]}  {i[1]}  {i[2]}')
+print('-------------------------------')
+
+# 4. Query all the products start with 'J'
+print('ALL PRODUCTS STARTIN WITH J:')
+cursor.execute("SELECT * FROM table_1 WHERE product LIKE 'J%'")
 for i in cursor.fetchall():
     print(f'{i[0]}  {i[1]}  {i[2]}')
 
