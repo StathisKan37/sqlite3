@@ -1,4 +1,4 @@
-# Excersice:
+# Excercise:
 # ---------------------------------------------------------------------
 # 1. Query the whiskies with less than 25 euros
 # 2. Query everything except 7up
