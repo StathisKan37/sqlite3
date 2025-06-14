@@ -1,4 +1,4 @@
-# Excersice:
+# Excercise:
 # ---------------------------------------------------------------------
 # 1. Query the Honda and Toyota cars
 # 2. Query the cars with models ending in 'a' or 5
